@@ -174,7 +174,7 @@ def apply_hierarchical_sdt_model(data):
 
          # Hyperpriors for d' intercept and fixed effects
         intercept_d_prime = pm.Normal('intercept_d_prime', mu=0, sigma=1)
-        stim_d_prime = pm.Normal('stim_d_prime', mu=0, sigma=1)
+        stim_d_prime = pm.Normal('stim_d_prime', mu=0, sigma=1)    ## Used ChatGPT to figure out hyperpriors
         diff_d_prime = pm.Normal('diff_d_prime', mu=0, sigma=1)
         interaction_d_prime = pm.Normal('interaction_d_prime', mu=0, sigma=1)
         
@@ -337,7 +337,7 @@ def analyze_data(file_path):
 
     # SDT Convergence
     summary = az.summary(trace, var_names=trace_vars, hdi_prob=0.95)
-    print("\nPosterior Summary of Fixed Effects (Regression Coefficients):")
+    print("\nPosterior Summary of Fixed Effects (Regression Coefficients):")  # Used ChatGPT to figure out SDT convergence
     print(summary)
     summary.to_csv("trace_summary.csv")
 
