@@ -174,7 +174,7 @@ def apply_hierarchical_sdt_model(data):
 
          # Hyperpriors for d' intercept and fixed effects
         intercept_d_prime = pm.Normal('intercept_d_prime', mu=0, sigma=1)
-        stim_d_prime = pm.Normal('stim_d_prime', mu=0, sigma=1)    ## Used ChatGPT to figure out hyperpriors
+        stim_d_prime = pm.Normal('stim_d_prime', mu=0, sigma=1)    ## Used AI to figure out hyperpriors
         diff_d_prime = pm.Normal('diff_d_prime', mu=0, sigma=1)
         interaction_d_prime = pm.Normal('interaction_d_prime', mu=0, sigma=1)
         
