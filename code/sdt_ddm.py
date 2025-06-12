@@ -352,7 +352,7 @@ def compare(trace, dp_data):
 
     sdt_summary = az.summary(trace, var_names=["stim_d_prime", "diff_d_prime", "interaction_d_prime","stim_criterion", "diff_criterion", "interaction_criterion"])
     print(sdt_summary)
-    condition_pairs = [(0, 1),(0, 2)]
+    condition_pairs = [(0, 1),(2, 3)]
 
     for cond1, cond2 in condition_pairs:
         label = f"{CONDITION_NAMES[cond2]} - {CONDITION_NAMES[cond1]}"
